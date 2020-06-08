@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('search') }}
+{% endblock %}
+
+{% block body_id 'blog_search' %}
+
+{% block main %}
+    <form action="{{ path('blog_search') }}" method="get">
+        <div class="form-group">
+            <input name="q"
+                   class="form-control search-field"
+                   placeholder="Rechercher..."
+                   autocomplete="off"
+                   autofocus
+                   data-no-results-message="Aucun résultat"
+            >
+        </div>
+    </form>
+
+    <div id="results">
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+ 
+{% endblock %}

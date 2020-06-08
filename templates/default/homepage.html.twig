@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'homepage' %}
+
+
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>Projet symfony "BLOG" </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div>
+                <p>
+                    Visitez comme utilisateur
+                </p>
+                <p>
+                    <a class="btn btn-info btn-lg" href="{{ path('blog_index') }}">
+                        Naviguez
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div>
+                <p>
+                    Espace Admin
+                </p>
+                <p>
+                    <a class="btn btn-info btn-lg" href="{{ path('admin_index') }}">
+                      Connecter
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
